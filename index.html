@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario sobre Administración Pública en México</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0073e6;
+        }
+
+        h2 {
+            color: #00509e;
+        }
+
+        .question {
+            margin-bottom: 20px;
+        }
+
+        .question p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .option {
+            margin: 5px 0;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        .submit-button {
+            display: block;
+            width: 100px;
+            padding: 10px;
+            margin: 20px auto;
+            background-color: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #00509e;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #28a745;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Cuestionario sobre Administración Pública en México</h1>
+    <form id="quizForm">
+        <div class="question">
+            <h2>1. ¿Cuántos niveles de administración pública existen en México?</h2>
+            <div class="option">
+                <input type="radio" name="question1" value="incorrecto" id="q1a">
+                <label for="q1a">Dos niveles</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question1" value="correcto" id="q1b">
+                <label for="q1b">Tres niveles</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question1" value="incorrecto" id="q1c">
+                <label for="q1c">Cuatro niveles</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>2. ¿Cuál es uno de los principales desafíos de la administración pública en México?</h2>
+            <div class="option">
+                <input type="radio" name="question2" value="correcto" id="q2a">
+                <label for="q2a">Corrupción</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question2" value="incorrecto" id="q2b">
+                <label for="q2b">Falta de recursos naturales</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question2" value="incorrecto" id="q2c">
+                <label for="q2c">Conflictos internacionales</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h2>3. ¿Qué institución es clave en la gestión de recursos a nivel federal en México?</h2>
+            <div class="option">
+                <input type="radio" name="question3" value="correcto" id="q3a">
+                <label for="q3a">Secretaría de Hacienda y Crédito Público (SHCP)</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question3" value="incorrecto" id="q3b">
+                <label for="q3b">Secretaría de Salud (SSA)</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question3" value="incorrecto" id="q3c">
+                <label for="q3c">Secretaría de Educación Pública (SEP)</label>
+            </div>
+        </div>
+
+        <!-- Nueva Pregunta 4 -->
+        <div class="question">
+            <h2>4. ¿Cuál es el nivel más cercano a la ciudadanía en la administración pública mexicana?</h2>
+            <div class="option">
+                <input type="radio" name="question4" value="incorrecto" id="q4a">
+                <label for="q4a">Federal</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question4" value="incorrecto" id="q4b">
+                <label for="q4b">Estatal</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question4" value="correcto" id="q4c">
+                <label for="q4c">Municipal</label>
+            </div>
+        </div>
+
+        <!-- Nueva Pregunta 5 -->
+        <div class="question">
+            <h2>5. ¿Qué herramienta ha ayudado a mejorar la eficiencia de los servicios públicos en México?</h2>
+            <div class="option">
+                <input type="radio" name="question5" value="incorrecto" id="q5a">
+                <label for="q5a">Subsidios</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question5" value="correcto" id="q5b">
+                <label for="q5b">Digitalización</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question5" value="incorrecto" id="q5c">
+                <label for="q5c">Inversión extranjera</label>
+            </div>
+        </div>
+
+        <!-- Nueva Pregunta 6 -->
+        <div class="question">
+            <h2>6. ¿Cuál es uno de los objetivos del Programa de Mejora Regulatoria en México?</h2>
+            <div class="option">
+                <input type="radio" name="question6" value="incorrecto" id="q6a">
+                <label for="q6a">Incrementar impuestos</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question6" value="correcto" id="q6b">
+                <label for="q6b">Simplificar trámites</label>
+            </div>
+            <div class="option">
+                <input type="radio" name="question6" value="incorrecto" id="q6c">
+                <label for="q6c">Crear nuevos empleos</label>
+            </div>
+        </div>
+
+        <button type="button" class="submit-button" onclick="checkAnswers()">Enviar</button>
+    </form>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            const totalQuestions = 6;
+
+            const q1 = document.querySelector('input[name="question1"]:checked');
+            const q2 = document.querySelector('input[name="question2"]:checked');
+            const q3 = document.querySelector('input[name="question3"]:checked');
+            const q4 = document.querySelector('input[name="question4"]:checked');
+            const q5 = document.querySelector('input[name="question5"]:checked');
+            const q6 = document.querySelector('input[name="question6"]:checked');
+
+            if (q1 && q1.value === "correcto") score++;
+            if (q2 && q2.value === "correcto") score++;
+            if (q3 && q3.value === "correcto") score++;
+            if (q4 && q4.value === "correcto") score++;
+            if (q5 && q5.value === "correcto") score++;
+            if (q6 && q6.value === "correcto") score++;
+
+            document.getElementById('result').innerText = "Obtuviste " + score + " de " + totalQuestions + " respuestas correctas.";
+        }
+    </script>
+
+</body>
+</html>
